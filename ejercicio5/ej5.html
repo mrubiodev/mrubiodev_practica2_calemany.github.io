@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ejercicio 5 - DOM básico - Modificación listas</title>
+
+		<!-- botonFlotante EJERCICION 10-->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet"  />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+		<script type="text/javascript" src="../floatbuttonreturn.js"></script> 
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- Fin botonFlotante EJERCICION 10-->
+		
+
+    <!-- Importamos Bootstrap para aplicar estilos más modernos
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+     -->
+  </head>
+
+  <body class="p-3">
+    <!-- Lista con clase de Bootstrap para mejorar el diseño -->
+    <ul id="lista" class="list-group">
+      <li class="list-group-item">Lorem ipsum dolor sit amet</li>
+      <li class="list-group-item">Consectetuer adipiscing elit</li>
+      <li class="list-group-item">Sed mattis enim vitae orci</li>
+      <li class="list-group-item">Phasellus libero</li>
+      <li class="list-group-item">Maecenas nisl arcu</li>
+    </ul>
+
+    <!-- Botón estilizado con Bootstrap -->
+    <input type="button" id="addButton" class="btn btn-primary mt-3" value="Añadir elemento" />
+  </body>
+
+  <script type="text/javascript">
+    // Selección de la lista y el botón de añadir
+    const lista = document.getElementById("lista");
+    const addButton = document.getElementById("addButton");
+
+    // Función para añadir un nuevo elemento a la lista
+    addButton.addEventListener("click", () => {
+      // Creación de un nuevo elemento 'li' para la lista
+      const nuevoElemento = document.createElement("li");
+      // Contador para determinar el índice del nuevo elemento
+      const posicion = lista.children.length + 1;
+      // Configuración del texto del elemento y la clase Bootstrap
+      nuevoElemento.textContent = `Elemento ${posicion}`;
+      nuevoElemento.className = "list-group-item"; // Añadimos el estilo Bootstrap
+      // Añadimos el nuevo elemento a la lista
+      lista.appendChild(nuevoElemento);
+    });
+  </script>
+</html>

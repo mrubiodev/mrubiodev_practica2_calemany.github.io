@@ -1,0 +1,11 @@
+.additional {
+  display: none; /* Por defecto, el texto adicional no se muestra */
+}
+
+.additional.hidden {
+  display: none; /* Oculto cuando tiene la clase 'hidden' */
+}
+
+.additional.visible {
+  display: inline; /* Muestra el texto cuando tiene la clase 'visible' */
+}
